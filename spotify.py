@@ -8,7 +8,7 @@ sp = spotipy.Spotify(
     )
 )
 
-followedArtists = {} #consider using SQLite
+followedArtists = {} # consider using SQLite
 
 
 def searchArtistIdByName():
@@ -18,6 +18,7 @@ def searchArtistIdByName():
 def followArtist(artist_id):
     artist_album = sp.artist_albums(artist_id, limit=50)
     followedArtists[artist_id] = len(artist_album)
+    
 
 
 
